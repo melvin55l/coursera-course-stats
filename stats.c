@@ -55,7 +55,7 @@ void print_array(unsigned char * array, int len) {
     for(int i=0; i<len; i++){
        printf("%d ", array[i]);
     }
-    return;
+    return;		//Loop to call every elements out and print
 }
 
 double find_median(unsigned char * array, int len){
@@ -63,15 +63,15 @@ double find_median(unsigned char * array, int len){
     double temp = 0;
     temp = (double)(array[len/2]+array[len/2-1])/2;
     return temp;
-}
+}			//To find median, find the middle value of the sorted array, divide by 2 if SIZE is even
 
 double find_mean(unsigned char * array, int len){
-    
+ 
     double temp = array[0];
     for(int i=1; i<len; i++){
     	temp += array[i];
     }
-    temp /= len;
+    temp /= len;	//To find mean, sums up the all array numbers and divide the array SIZE
     return temp;
 }
 
@@ -82,7 +82,7 @@ unsigned char find_maximum(unsigned char * array, int len) {
         if(array[i]>temp){
             temp = array[i];
         }
-    }
+    }			//To find maximum, compare every array elements with temp variable, update temp variable if necessary
     return temp;
 
 }
@@ -94,7 +94,7 @@ unsigned char find_minimum(unsigned char * array, int len) {
         if(array[i]<temp){
             temp = array[i];
         }
-    }
+    }			//To find minimum, compare every array elements with temp variable, update temp variable if necessary
     return temp;
 
 }
